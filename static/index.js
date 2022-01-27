@@ -376,9 +376,9 @@ function gameTapEvent(e) {
     let y = e.clientY || e.targetTouches[0].clientY,
         x = (e.clientX || e.targetTouches[0].clientX) - body.offsetLeft,
         p = _gameBBList[_gameBBListIndex];
-    if (y > touchArea[0] || y < touchArea[1]) {
-        return false;
-    }
+    //if (y > touchArea[0] || y < touchArea[1]) {
+    //    return false;
+    //}
     if ((p.id == tar.id && tar.notEmpty) || (p.cell == 0 && x < blockSize) || (p.cell == 1 && x > blockSize && x < 2 *
         blockSize) || (p.cell == 2 && x > 2 * blockSize && x < 3 * blockSize) || (p.cell == 3 && x > 3 * blockSize)) {
         if (!_gameStart) {
